@@ -25,7 +25,7 @@ case "$OS" in
   wasm)
     git -C build apply -v "$PATCHES/wasm/build.patch"
     mkdir -p "build/toolchain/wasm"
-    cp "$PATCHES/wasm/emscripten.gni" "build/toolchain/wasm"
+    cp "$PATCHES/wasm/emscripten.gn" "build/toolchain/wasm/BUILD.gn"
     ;;
 
   win)
