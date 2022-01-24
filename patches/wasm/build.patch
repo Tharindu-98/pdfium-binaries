@@ -1,5 +1,5 @@
 diff --git a/config/BUILDCONFIG.gn b/config/BUILDCONFIG.gn
-index fcc7e1283..b0973e98c 100644
+index fcc7e1283..ce71d3683 100644
 --- a/config/BUILDCONFIG.gn
 +++ b/config/BUILDCONFIG.gn
 @@ -262,6 +262,8 @@ if (target_os == "android") {
@@ -10,4 +10,12 @@ index fcc7e1283..b0973e98c 100644
 +  _default_toolchain = "//build/toolchain/wasm:emscripten"
  } else {
    assert(false, "Unsupported target_os: $target_os")
+ }
+@@ -377,7 +379,6 @@ if (is_android) {
+ 
+ if (is_clang && !is_nacl) {
+   default_compiler_configs += [
+-    "//build/config/clang:find_bad_constructs",
+     "//build/config/clang:extra_warnings",
+   ]
  }
