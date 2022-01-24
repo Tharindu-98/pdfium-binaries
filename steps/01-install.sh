@@ -33,9 +33,10 @@ case "$TARGET_OS-$TARGET_CPU" in
 
   wasm-wasm)
     git clone https://github.com/emscripten-core/emsdk.git
-    cd emsdk
+    pushd emsdk
     ./emsdk install latest
     ./emsdk activate latest
-    # TODO: set environment variables
+    echo "$PWD/upstream/emscripten" >> "$PATH_FILE"
+    popd
 
 esac
