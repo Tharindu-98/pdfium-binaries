@@ -37,6 +37,7 @@ case "$TARGET_OS-$TARGET_CPU" in
     ./emsdk install latest
     ./emsdk activate latest
     echo "$PWD/upstream/emscripten" >> "$PATH_FILE"
+    echo "$PWD/upstream/bin" >> "$PATH_FILE"
     popd
 
 esac

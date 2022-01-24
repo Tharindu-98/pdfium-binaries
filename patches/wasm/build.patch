@@ -58,7 +58,7 @@ index 3520e4288..d15b6680d 100644
  }
  
 diff --git a/toolchain/toolchain.gni b/toolchain/toolchain.gni
-index b2d0b44b1..1d3b6dfb6 100644
+index b2d0b44b1..b7a5cd3c5 100644
 --- a/toolchain/toolchain.gni
 +++ b/toolchain/toolchain.gni
 @@ -47,6 +47,8 @@ if (is_apple) {
@@ -66,7 +66,7 @@ index b2d0b44b1..1d3b6dfb6 100644
  } else if (is_win) {
    shlib_extension = ".dll"
 +} if (is_wasm) {
-+  shlib_extension = ".wasm"
++  shlib_extension = ".so"
  } else {
    assert(false, "Platform not supported")
  }

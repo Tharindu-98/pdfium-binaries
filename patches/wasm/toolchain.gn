@@ -1,9 +1,10 @@
 import("//build/toolchain/gcc_toolchain.gni")
 
-clang_toolchain("emscripten") {
+gcc_toolchain("emscripten") {
   cc = "emcc"
   cxx = "em++"
 
+  readelf = "llvm-readobj"
   ar = "emar"
   ld = cxx
   nm = "emnm"
