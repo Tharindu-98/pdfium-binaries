@@ -1,6 +1,6 @@
 import("//build/toolchain/gcc_toolchain.gni")
 
-gcc_toolchain("emscripten") {
+clang_toolchain("emscripten") {
   cc = "emcc"
   cxx = "em++"
 
