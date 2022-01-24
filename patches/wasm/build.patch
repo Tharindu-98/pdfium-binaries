@@ -19,3 +19,16 @@ index fcc7e1283..ce71d3683 100644
      "//build/config/clang:extra_warnings",
    ]
  }
+diff --git a/config/compiler/BUILD.gn b/config/compiler/BUILD.gn
+index e49fc28c0..b10a9573d 100644
+--- a/config/compiler/BUILD.gn
++++ b/config/compiler/BUILD.gn
+@@ -287,6 +287,8 @@ config("compiler") {
+     configs += [ "//build/config/aix:compiler" ]
+   } else if (current_os == "zos") {
+     configs += [ "//build/config/zos:compiler" ]
++  } else if (current_os == "wasm") {
++    configs += [ "//build/config/wasm:compiler" ]
+   }
+ 
+   configs += [
