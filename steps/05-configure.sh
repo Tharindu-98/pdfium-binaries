@@ -36,6 +36,9 @@ mkdir -p "$BUILD"
     mac)
       echo 'mac_deployment_target = "10.11.0"'
       ;;
+    wasm)
+      echo 'is_clang = false'
+      ;;
     win)
       echo 'pdf_use_win32_gdi = true'
       ;;
