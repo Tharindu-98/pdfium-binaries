@@ -1,0 +1,18 @@
+# import("//build/config/ozone.gni")
+# import("//build/config/sysroot.gni")
+# import("//build/config/ui.gni")
+import("//build/toolchain/gcc_toolchain.gni")
+
+clang_toolchain("emscripten") {
+  cc = "emcc"
+  cxx = "em++"
+
+  ar = "emar"
+  ld = cxx
+  nm = "emnm"
+
+  toolchain_args = {
+    current_cpu = "wasm"
+    current_os = "wasm"
+  }
+}

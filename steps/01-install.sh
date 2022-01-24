@@ -30,4 +30,12 @@ case "$TARGET_OS-$TARGET_CPU" in
     sudo apt-get update
     sudo apt-get install -y g++-aarch64-linux-gnu
     ;;
+
+  wasm-wasm)
+    git clone https://github.com/emscripten-core/emsdk.git
+    cd emsdk
+    ./emsdk install latest
+    ./emsdk activate latest
+    # TODO: set environment variables
+
 esac

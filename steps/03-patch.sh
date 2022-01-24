@@ -22,6 +22,12 @@ case "$OS" in
     git -C third_party/libjpeg_turbo apply -v "$PATCHES/ios/libjpeg_turbo.patch"
     ;;
 
+  wasm)
+    git -C build apply -v "$PATCHES/wasm/build.patch"
+    mkdir -p "build/toolchain/wasm"
+    cp "$PATCHES/wasm/emscripten.gni" "build/toolchain/wasm"
+    ;;
+
   win)
     git apply -v "$PATCHES/win/pdfium.patch"
     git -C build apply -v "$PATCHES/win/build.patch"
